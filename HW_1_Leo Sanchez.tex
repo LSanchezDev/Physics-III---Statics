@@ -1,0 +1,150 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{fullpage} % changes the margin
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage[version=4]{mhchem}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\usepackage{cancel}
+\AtBeginDvi{\input{zhwinfonts}}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed} \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+\newenvironment{guideln}[1][Homework submission guidelines:]
+    { \begin{mdframed}[backgroundcolor=yellow!80] \textbf{#1} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textbf{\textit{Ans.}}\\}
+    { }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Homework - \#1} \hfill \textbf{Leonardo Sánchez} |  孫\text{ }力弘   \\
+Physics III - Statics \hfill Civil \& Electromechanical Engineering \\
+Professor Yao-Chung Chen | 陳\text{ }堯中 \hfill Due date: $10^{th}$ August, 2020\\
+Teacher Assistant: Cesar Ayala\hfill UPTP \\
+\noindent\rule{7.5in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1 - (Page 15 - R. C. Hibbeler $14^{th}$ ed.)}
+    Evaluate each of the following and express with an appropriate prefix:
+     (a) $(430 \text{ kg})^2$, (b) $(0.002\text{ mg})^2$, and
+    (c) $(230\text{ m})^3$.
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+(a)
+    \[(430\text{ kg})^2=18\underline{4}\, 900\text{ kg}^2 = 0.18\underline{4}\, 9\times 10^6 \left(\frac{1 \text{ Mg}}{10^3 \text{ kg}}\right)^2 \text{ kg²}=\]
+    \[0.18\underline{4}\,\, 9\times \cancel{10^6} \times \frac{1 \text{ Mg}^2}{\cancel{10^6} \cancel{\text{ kg²}}}\times \cancel{\text{ kg²}}=\boxed{0.18\underline{5}\text{ Mg²}}\]
+\end{solution}
+(b)
+    \[(0.002\text{ mg})^2=0.000\,00\underline{4}\text{ mg}^2 = \underline{4}\times 10^{-6} \left(\frac{1 \,\mu\text{g}}{10^{-3} \text{ mg}}\right)^2 \text{ mg²}=\]
+    \[\underline{4}\times \cancel{10^{-6}} \times \frac{1 \mu \text{g}^2}{\cancel{10^{-6}} \cancel{\text{ mg²}}}\times \cancel{\text{ mg²}}=\boxed{4\mu\text{ g²}}\]
+(c)
+    \[(230 \text{ m})^3=12\,\underline{1}67\,000\text{ m}^3 =0.012\,\underline{2}\times 10^{9} \left(\frac{1 \text{ km}}{10^{3} \text{ m}}\right)^3 \text{ m³}=\]
+    \[0.012\,\underline{2}\times \cancel{10^{9}} \times \frac{1 \text{ km}^3}{\cancel{10^{9}} \cancel{\text{ mg²}}}\times \cancel{\text{ m³}}=\boxed{0.0122\text{ km³}}\]
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{8 - (Page 15 - R. C. Hibbeler $14^{th}$ ed.)}
+    Represent each of the following combinations of units
+    in the correct SI form: (a) $\text{GN} \cdot \mu \text{m}$, (b) $\text{kg}/\mu \text{m}$, (c) $\text{N/ks}^2$,
+    and (d) $\text{kN}/\mu \text{s}$.
+\end{problem}
+\begin{solution}
+(a)
+\[\text{GN} \cdot \mu \text{m}=10^9\text{ N}\cdot 10^{-6} \text{ m}=10^{9-6}\text{ N}\cdot \text{ m}=\]
+\[10^3\text{ N}\cdot \text{ m}=\boxed{\text{kN}\cdot \text{m}}\]
+(b)
+\[\text{kg}/\mu \text{m}=\cfrac{10^3\text{ g}}{10^{-6}\text{ m}}=\cfrac{10^{3+6}\text{ g}}{m}=\]
+\[\cfrac{10^9\text{ g}}{m}=\boxed{\cfrac{\text{Gg}}{m}}\]
+(c)
+\[\text{N/ks}^2=\cfrac{\text{N}}{(\text{10³ s})^2}=\cfrac{\text{N}}{10^{3\cdot 2}\text{s²}}=\]
+\[\cfrac{10^{-6}\text{N}}{\text{ s²}}=\boxed{\cfrac{\mu\text{N}}{\text{s²}}}\]
+(d)
+\[\text{kN}/\mu \text{s}=\cfrac{10^3 \text{ N}}{10^{-6}\text{ s}}=\cfrac{10^{3+6}\text{ N}}{s}=\]
+\[\cfrac{10^9 \text{ N}}{s}=\boxed{\cfrac{\text{GN}}{s}}\]
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{14 - (Page 15 - R. C. Hibbeler $14^{th}$ ed.)}
+    Evaluate each of the following to three significant
+    figures and express each answer in SI units using an
+    appropriate prefix: (a) 354 mg (45 km)/(0.0356 kN),
+    (b) (0.004 53 Mg) (201 ms), (c) 435 MN/23.2 mm.
+\end{problem}
+\begin{solution}
+    (a)
+    \[354 \text{ mg}\cdot \cfrac{45 \text{ km}}{0.035\,6 \text{ kN}}=\cfrac{354 \times 10^{-3} \text{ g}\cdot 45\times 10^3\text{ m}}{0.035\, 6 \times 10^3 \text{ N}}=\cfrac{354 \times 45 \times \cancel{10^3}\times \cancel{10^{-3}}}{35.6}\cdot\left(\cfrac{\text{g}\cdot \text{m}}{\text{N}}\right)=\]
+    \[\cfrac{44\underline{7}.471\,910\,112\text{ g}\cdot \text{m}}{N}=\boxed{\cfrac{44\underline{7}\text{ g}\cdot \text{m}}{\text{N}}}\]
+    (b)
+    \[0.004\,53 \text{ Mg}\cdot 201 \text{ ms}=0.004\, 53 \times 10^6 \text{ g} \cdot 201 \times 10^{-3} \text{s}=4.53\times \cancel{10^3} \times 201 \times \cancel{10^{-3}}\text{ g}\cdot \text{s}\]
+    \[91\underline{0}.53\text{ g}\cdot \text{s}=\boxed{0.91\underline{0} \text{ kg}\cdot \text{s}}\]
+    (c)
+    \[\cfrac{435 \text{ MN}}{23.2 \text{ mm}}=\cfrac{435 \times 10^6 \text{ N}}{23.2 \times 10^{-3}\text{ m}}=\cfrac{435 \times 10^{6+3}\text{ N}}{23.2 \text{ m}}\]
+    \[\cfrac{435 \text{ GN}}{23.2 \text{ m}}=\cfrac{18.\underline{7}5\text{ GN}}{\text{ m}}=\boxed{\cfrac{18.\underline{8} \text{ GN}}{\text{m}}} \]
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{17 - (Page 15 - R. C. Hibbeler $14^{th}$ ed.)}
+    A concrete column has a diameter of 350 mm and
+    a length of 2 m. If the density (mass/volume) of concrete is
+    $2.45\text{ Mg/m}^3$, determine the weight of the column.
+\end{problem}
+\begin{solution}
+    For this problem we use the volume of the column times the density of concrete to find the answer, we just need to make sure our units are the same.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{20 - (Page 15 - R. C. Hibbeler $14^{th}$ ed.)}
+    Evaluate each of the following to three significant
+figures and express each answer in SI units using an
+appropriate prefix: (a) $(200 \text{ kN})^2$, (b) $(0.005\text{ mm})^2$, and (c)
+$(400\text{ m})^3$.
+\end{problem}
+\begin{solution}
+    \pagebreak
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
